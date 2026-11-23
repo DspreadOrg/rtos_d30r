@@ -1,0 +1,78 @@
+---
+# ===========================================================================
+# App 代码格式（依据 app_csdk/examples/Demo/App 现有源码归纳）
+# TRAE / VS Code 的 C/C++ 扩展默认读取本文件（C_Cpp.clang_format_style = file）
+# 说明：clang-format 会从被格式化文件所在目录向上查找本文件，
+#       因此这里只作用于 App 目录，不会波及 Lvgl / Emv / Lib 等 SDK 代码。
+# ===========================================================================
+Language: Cpp
+BasedOnStyle: LLVM
+
+# ---- 缩进 / 行宽 ----
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 120
+ContinuationIndentWidth: 4
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# ---- 大括号：Allman（函数 / if / else / struct / enum / switch 的花括号独占一行） ----
+BreakBeforeBraces: Allman
+
+# ---- 指针：* 紧贴变量名 ----
+PointerAlignment: Right
+DerivePointerAlignment: false
+
+# ---- 括号与空格 ----
+AlignAfterOpenBracket: Align
+BinPackArguments: true
+BinPackParameters: true
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+SpaceBeforeParens: ControlStatements
+SpaceAfterCStyleCast: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpacesInAngles: false
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+Cpp11BracedListStyle: false
+SpaceBeforeCpp11BracedList: false
+
+# ---- 对齐：宏定义、连续赋值、行尾注释 ----
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+  AlignCompound: false
+  PadOperators: true
+AlignConsecutiveDeclarations: false
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 0
+AlignOperands: Align
+
+# ---- 换行 ----
+BreakBeforeBinaryOperators: None
+BreakBeforeTernaryOperators: true
+BreakStringLiterals: false
+IndentCaseLabels: false
+IndentPPDirectives: None
+IndentGotoLabels: false
+
+# ---- 短语句保持展开 ----
+AllowShortFunctionsOnASingleLine: None
+AllowShortBlocksOnASingleLine: Never
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+
+# ---- 注释与 include ----
+ReflowComments: false
+SortIncludes: Never
+IncludeBlocks: Preserve
